@@ -94,10 +94,21 @@
         var val = sel.value;
         if (!val) return;
 
-        if (val.startsWith('http')) {
+        if (val.indexOf('/releases/download/') !== -1) {
+          // Direct installer binary download from GitHub Releases
+          var parts = val.split('/');
+          var name = parts[parts.length - 1];
+          var a = document.createElement('a');
+          a.href = val;
+          a.setAttribute('download', name);
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+          showDownloadToast(name);
+        } else if (val.startsWith('http')) {
           window.open(val, '_blank', 'noopener,noreferrer');
         } else {
-          // Trigger local download
+          // Fallback local download
           var a = document.createElement('a');
           a.href = val;
           var parts = val.split('/');
