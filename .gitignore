@@ -1,0 +1,9 @@
+# Installer binaries — hosted on GitHub Releases instead
+website/installers/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/

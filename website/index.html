@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Download CodeUI - Lightweight Code Editor for College Labs</title>
+  <meta name="description" content="Download CodeUI for Windows, macOS, and Linux. Free, lightweight, lab-safe code editor built for student computer labs and practical programming examinations.">
+  <link rel="icon" type="image/png" href="assets/codeui-logo.png">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Download CodeUI - Code Editor for College Labs">
+  <meta property="og:description" content="Free, open source, and built for college labs. Native installers for Windows, Linux, and macOS.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/codeui-logo.png">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Notification Banner -->
+  <div class="announcement-banner">
+    <span>🎓 CodeUI v0.1.0 is now live for College Computer Labs!</span>
+    <a href="https://github.com/iamriteshhh/CodeUI/releases/latest" target="_blank" rel="noopener">Read the release notes ↗</a>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar" aria-label="Main Navigation">
+    <div class="navbar-inner">
+      <div class="navbar-left">
+        <a href="#download" class="brand-link" aria-label="CodeUI Home">
+          <img src="assets/codeui-logo.png" alt="CodeUI Logo" class="brand-logo" width="28" height="28">
+          <span class="brand-name">CodeUI</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="#features">Features ▾</a></li>
+          <li><a href="https://github.com/iamriteshhh/CodeUI#readme" target="_blank" rel="noopener">Docs ▾</a></li>
+          <li><a href="https://github.com/iamriteshhh/CodeUI/releases" target="_blank" rel="noopener">Release Notes</a></li>
+          <li><a href="https://github.com/iamriteshhh/CodeUI" target="_blank" rel="noopener">GitHub ↗</a></li>
+        </ul>
+      </div>
+
+      <div class="navbar-right">
+        <div class="nav-search" title="Search documentation">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          <span>Search</span>
+          <span class="search-kbd">Ctrl+Shift+P</span>
+        </div>
+        <a href="#download" class="btn-nav-download">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <span>Download</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Header -->
+  <header class="hero" id="download">
+    <h1 class="hero-title">Download CodeUI</h1>
+    <p class="hero-sub">
+      Free, built on open source, and runs everywhere. We picked the build that fits your machine — <strong>one click and you're coding.</strong>
+    </p>
+  </header>
+
+  <!-- Main OS Download Cards Container -->
+  <main class="container">
+    <section class="os-grid" aria-label="Operating System Downloads">
+
+      <!-- CARD 1: Windows -->
+      <article class="os-card" id="card-windows" style="--card-accent: #0078d4;">
+        <!-- Visual Photo/Brand Banner -->
+        <div class="os-photo-banner" title="Windows 11 & Windows 10">
+          <img src="assets/windows.svg" alt="Microsoft Windows Logo" width="58" height="58">
+        </div>
+
+        <div class="os-card-header">
+          <div class="os-title-wrap">
+            <div class="os-header-icon">
+              <img src="assets/windows.svg" alt="" width="22" height="22">
+            </div>
+            <h2 class="os-name">Windows</h2>
+          </div>
+          <span class="badge-your-os" id="badge-windows" style="display: none;">YOUR OS</span>
+        </div>
+
+        <!-- Primary Download Button -->
+        <a href="installers/CodeUI_0.1.0_x64-setup.exe" 
+           download="CodeUI_0.1.0_x64-setup.exe"
+           class="btn-download-primary" 
+           id="btn-win-exe"
+           data-filename="CodeUI_0.1.0_x64-setup.exe"
+           title="Download Windows Setup 64-bit">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <span>Windows (.exe) • 29.5 MB</span>
+        </a>
+
+        <p class="os-requirements">Requires Windows 10 or 11 (64-bit)</p>
+
+        <!-- Other Downloads Dropdown -->
+        <div class="os-other-downloads">
+          <label class="other-label" for="select-win">OTHER DOWNLOADS</label>
+          <select class="download-select" id="select-win">
+            <option value="">Select a download...</option>
+            <option value="installers/CodeUI_0.1.0_x64-setup.exe">User Installer 64-bit (.exe) — 29.5 MB</option>
+            <option value="installers/CodeUI_0.1.0_x64_en-US.msi">System / Lab MSI Installer (.msi) — 43.4 MB</option>
+            <option value="https://github.com/iamriteshhh/CodeUI/releases/latest">All Windows Releases on GitHub ↗</option>
+          </select>
+        </div>
+      </article>
+
+      <!-- CARD 2: macOS -->
+      <article class="os-card" id="card-mac" style="--card-accent: #ffffff;">
+        <!-- Visual Photo/Brand Banner -->
+        <div class="os-photo-banner" title="macOS Apple Silicon & Intel">
+          <img src="assets/appple.svg" alt="Apple macOS Logo" width="58" height="58">
+        </div>
+
+        <div class="os-card-header">
+          <div class="os-title-wrap">
+            <div class="os-header-icon">
+              <img src="assets/appple.svg" alt="" width="22" height="22">
+            </div>
+            <h2 class="os-name">macOS</h2>
+          </div>
+          <span class="badge-your-os" id="badge-mac" style="display: none;">YOUR OS</span>
+        </div>
+
+        <!-- Primary Download Button -->
+        <a href="installers/CodeUI_0.1.0_aarch64.dmg" 
+           download="CodeUI_0.1.0_aarch64.dmg"
+           class="btn-download-primary" 
+           id="btn-mac-dmg"
+           data-filename="CodeUI_0.1.0_aarch64.dmg"
+           title="Download macOS Disk Image">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <span>Mac Universal (.dmg) • 51.1 MB</span>
+        </a>
+
+        <p class="os-requirements">Requires macOS 10.13 or later</p>
+
+        <!-- Other Downloads Dropdown -->
+        <div class="os-other-downloads">
+          <label class="other-label" for="select-mac-opt">OTHER DOWNLOADS</label>
+          <select class="download-select" id="select-mac-opt">
+            <option value="">Select a download...</option>
+            <option value="installers/CodeUI_0.1.0_aarch64.dmg">macOS Disk Image Universal (.dmg) — 51.1 MB</option>
+            <option value="https://github.com/iamriteshhh/CodeUI/releases/latest">All macOS Releases on GitHub ↗</option>
+          </select>
+        </div>
+      </article>
+
+      <!-- CARD 3: Linux -->
+      <article class="os-card" id="card-linux" style="--card-accent: #e95420;">
+        <!-- Visual Photo/Brand Banner with Ubuntu & Linux logos -->
+        <div class="os-photo-banner" title="Ubuntu, Debian, Fedora & Arch Linux" style="gap: 16px;">
+          <img src="assets/ubuntu.svg" alt="Ubuntu Logo" width="52" height="52">
+          <img src="assets/linux.svg" alt="Linux Tux" width="52" height="52">
+        </div>
+
+        <div class="os-card-header">
+          <div class="os-title-wrap">
+            <div class="os-header-icon">
+              <img src="assets/ubuntu.svg" alt="" width="22" height="22">
+            </div>
+            <h2 class="os-name">Linux</h2>
+          </div>
+          <span class="badge-your-os" id="badge-linux" style="display: none;">YOUR OS</span>
+        </div>
+
+        <!-- Dual Download Buttons for Linux -->
+        <div class="btn-dual-wrap">
+          <a href="installers/CodeUI_0.1.0_amd64.deb" 
+             download="CodeUI_0.1.0_amd64.deb"
+             class="btn-download-secondary" 
+             id="btn-linux-deb"
+             data-filename="CodeUI_0.1.0_amd64.deb"
+             title="Download Debian / Ubuntu package">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span>Debian/Ubuntu • 52.7 MB</span>
+          </a>
+
+          <a href="installers/CodeUI_0.1.0_amd64.AppImage" 
+             download="CodeUI_0.1.0_amd64.AppImage"
+             class="btn-download-secondary" 
+             id="btn-linux-appimage"
+             data-filename="CodeUI_0.1.0_amd64.AppImage"
+             title="Download Linux AppImage">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span>AppImage • 155.8 MB</span>
+          </a>
+        </div>
+
+        <p class="os-requirements">See Linux requirements (Ubuntu 22.04+ baseline)</p>
+
+        <!-- Other Downloads Dropdown -->
+        <div class="os-other-downloads">
+          <label class="other-label" for="select-linux-opt">OTHER DOWNLOADS</label>
+          <select class="download-select" id="select-linux-opt">
+            <option value="">Select a download...</option>
+            <option value="installers/CodeUI_0.1.0_amd64.deb">Debian Package 64-bit (.deb) — 52.7 MB</option>
+            <option value="installers/CodeUI_0.1.0_amd64.AppImage">Universal AppImage 64-bit — 155.8 MB</option>
+            <option value="https://github.com/iamriteshhh/CodeUI/releases/latest">All Linux Releases on GitHub ↗</option>
+          </select>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- License Agreement Notice -->
+    <div class="terms-notice">
+      By downloading and using CodeUI, you agree to the <a href="https://github.com/iamriteshhh/CodeUI/blob/main/LICENSE" target="_blank" rel="noopener">MIT license</a> and <a href="https://github.com/iamriteshhh/CodeUI#key-principles" target="_blank" rel="noopener">academic integrity principles</a>.
+    </div>
+
+    <!-- Feature Highlight Section (3 Columns like VS Code bottom cards) -->
+    <section class="feature-grid" id="features" aria-label="Key Features">
+      
+      <div class="feature-card">
+        <div class="feature-icon-circle">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+        </div>
+        <h3 class="feature-title">Built for College Labs</h3>
+        <p class="feature-desc">
+          Lightweight, lab-safe desktop IDE with isolated process supervision, integrated terminal, and sandboxed scratch builds for practical exams.
+        </p>
+        <a href="https://github.com/iamriteshhh/CodeUI#overview" class="feature-link" target="_blank" rel="noopener">
+          <span>Read lab overview</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon-circle">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
+        </div>
+        <h3 class="feature-title">Zero AI Assistance</h3>
+        <p class="feature-desc">
+          Strictly no autocomplete, no code suggestions, and no AI assistants. Students write authentic code to preserve evaluation integrity.
+        </p>
+        <a href="https://github.com/iamriteshhh/CodeUI#key-principles" class="feature-link" target="_blank" rel="noopener">
+          <span>Learn about exam safety</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon-circle">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h3 class="feature-title">Get previous releases</h3>
+        <p class="feature-desc">
+          Need an older version or source code archive? Access previous releases, release notes, and changelogs on GitHub.
+        </p>
+        <a href="https://github.com/iamriteshhh/CodeUI/releases" class="feature-link" target="_blank" rel="noopener">
+          <span>Browse versions</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+
+    </section>
+
+    <!-- SHA-256 Accordion (matches VS Code accordion) -->
+    <section class="sha-section" aria-label="Checksum Verification">
+      <details class="sha-details">
+        <summary class="sha-summary">
+          <div class="sha-summary-left">
+            <span class="sha-arrow">▶</span>
+            <span>See SHA-256 hashes</span>
+          </div>
+          <span class="badge-sha">SHA-256</span>
+        </summary>
+        
+        <div class="sha-content">
+          <div class="sha-table-wrap">
+            <table class="sha-table">
+              <thead>
+                <tr>
+                  <th>Platform / File</th>
+                  <th>Format & Size</th>
+                  <th>SHA-256 Checksum</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="sha-filename">CodeUI_0.1.0_x64-setup.exe</td>
+                  <td>Windows Setup (29.5 MB)</td>
+                  <td><code class="sha-hash-code">09251150f2a2b302b121e6f2e7e57c4cc66029df3de0109e18f6459d2d55e9ef</code></td>
+                </tr>
+                <tr>
+                  <td class="sha-filename">CodeUI_0.1.0_x64_en-US.msi</td>
+                  <td>Windows MSI (43.4 MB)</td>
+                  <td><code class="sha-hash-code">906bf91c1fdf726fd55bc3fcc68242a8b1d8e670634a495f05e1d29a7318e046</code></td>
+                </tr>
+                <tr>
+                  <td class="sha-filename">CodeUI_0.1.0_amd64.deb</td>
+                  <td>Debian / Ubuntu (52.7 MB)</td>
+                  <td><code class="sha-hash-code">26464e2364346cb6fdb92d1e2c83f2daa2aa3c168fb6d0792e169d2fbe2f0eab</code></td>
+                </tr>
+                <tr>
+                  <td class="sha-filename">CodeUI_0.1.0_amd64.AppImage</td>
+                  <td>Linux AppImage (155.8 MB)</td>
+                  <td><code class="sha-hash-code">20cbf60c65e2f552fa639c2a3f601ed82c649dbce19afd42fab0890b753ada7d</code></td>
+                </tr>
+                <tr>
+                  <td class="sha-filename">CodeUI_0.1.0_aarch64.dmg</td>
+                  <td>macOS DMG (51.1 MB)</td>
+                  <td><code class="sha-hash-code">7113ee72cb0192fd01ace2253574fd469945c22a38f5f3aa2b1660a452615c29</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="sha-verify-command">
+            <p><strong>Verify in PowerShell:</strong> <code>Get-FileHash -Algorithm SHA256 .\CodeUI_0.1.0_x64-setup.exe</code></p>
+            <p style="margin-top: 6px;"><strong>Verify in Linux / macOS:</strong> <code>sha256sum -c SHA256SUMS.txt</code></p>
+          </div>
+        </div>
+      </details>
+    </section>
+
+  </main>
+
+  <!-- Toast Notification when a download is clicked -->
+  <div class="toast" id="download-toast" role="status" aria-live="polite">
+    <div class="toast-icon">⬇</div>
+    <div>
+      <strong id="toast-title">Downloading CodeUI...</strong>
+      <div id="toast-sub" style="font-size: 0.78rem; color: #a0aec0;">Your download will begin immediately.</div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-socials">
+          <a href="https://github.com/iamriteshhh/CodeUI" target="_blank" rel="noopener" aria-label="CodeUI on GitHub">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+        </div>
+
+        <ul class="footer-links">
+          <li><a href="https://github.com/iamriteshhh/CodeUI/issues" target="_blank" rel="noopener">Support</a></li>
+          <li><a href="https://github.com/iamriteshhh/CodeUI#key-principles" target="_blank" rel="noopener">Privacy & Integrity</a></li>
+          <li><a href="https://github.com/iamriteshhh/CodeUI/blob/main/LICENSE" target="_blank" rel="noopener">MIT License</a></li>
+          <li><a href="https://github.com/iamriteshhh/CodeUI/blob/main/README.md" target="_blank" rel="noopener">Documentation</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 CodeUI Contributors. MIT Licensed.</span>
+        <span>Built for academic excellence in student computer labs.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
