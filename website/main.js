@@ -1,9 +1,11 @@
 /**
  * CodeUI Download Website - Interactive logic
- * - OS Auto-detection
- * - Dynamic "YOUR OS" badge
- * - Dropdown download handler
+ * - OS Auto-detection & Dynamic "YOUR OS" badge
+ * - Dropdown & Direct installer download handler
  * - Download toast feedback
+ * - Developer Profiles Modal (@iamriteshhh & @Serion89)
+ * - Tab bar GitHub Star button with live stars count
+ * - Search bar click & keyboard shortcut (Ctrl+Shift+P)
  */
 
 (function () {
@@ -53,31 +55,38 @@
     }
   }
 
-  // 3. Toast Notification for Download Feedback
+  // 3. Versatile Toast Notification Feedback
   var toastTimer = null;
-  function showDownloadToast(filename) {
+  function showToast(title, subtitle, icon) {
     var toast = document.getElementById('download-toast');
     var toastTitle = document.getElementById('toast-title');
     var toastSub = document.getElementById('toast-sub');
+    var toastIcon = toast ? toast.querySelector('.toast-icon') : null;
 
     if (!toast) return;
 
-    if (toastTitle) {
-      toastTitle.textContent = 'Downloading ' + (filename || 'CodeUI') + '...';
-    }
-    if (toastSub) {
-      toastSub.textContent = 'Thank you for choosing CodeUI for your computer lab.';
-    }
+    if (toastTitle) toastTitle.textContent = title || 'CodeUI';
+    if (toastSub) toastSub.textContent = subtitle || '';
+    if (toastIcon && icon) toastIcon.textContent = icon;
 
     toast.classList.add('show');
 
     if (toastTimer) clearTimeout(toastTimer);
     toastTimer = setTimeout(function () {
       toast.classList.remove('show');
+      if (toastIcon) toastIcon.textContent = '⬇';
     }, 4500);
   }
 
-  // 4. Attach Click Handlers to All Download Links
+  function showDownloadToast(filename) {
+    showToast(
+      'Downloading ' + (filename || 'CodeUI') + '...',
+      'Thank you for choosing CodeUI for your computer lab.',
+      '⬇'
+    );
+  }
+
+  // 4. Attach Click Handlers to All Download Links & Selects
   function setupDownloadListeners() {
     var downloadLinks = document.querySelectorAll('a[download]');
     downloadLinks.forEach(function (link) {
@@ -126,19 +135,156 @@
     });
   }
 
-  // 5. Keyboard shortcut Ctrl+Shift+P
-  function setupSearchKbd() {
+  // 5. Developer Profiles Modal (@iamriteshhh & @Serion89)
+  function setupDeveloperModal() {
+    var modal = document.getElementById('dev-modal');
+    var closeBtn = document.getElementById('modal-close-btn');
+    var navTrigger = document.getElementById('nav-github-btn');
+    var footerTrigger = document.getElementById('footer-github-btn');
+
+    if (!modal) return;
+
+    function openModal() {
+      modal.style.display = 'flex';
+      // Force reflow for smooth opacity & transform transition
+      void modal.offsetWidth;
+      modal.classList.add('show');
+      document.body.style.overflow = 'hidden';
+      if (closeBtn) closeBtn.focus();
+    }
+
+    function closeModal() {
+      modal.classList.remove('show');
+      setTimeout(function () {
+        if (!modal.classList.contains('show')) {
+          modal.style.display = 'none';
+          document.body.style.overflow = '';
+        }
+      }, 250);
+    }
+
+    if (navTrigger) {
+      navTrigger.addEventListener('click', function (e) {
+        e.preventDefault();
+        openModal();
+      });
+    }
+
+    if (footerTrigger) {
+      footerTrigger.addEventListener('click', function (e) {
+        e.preventDefault();
+        openModal();
+      });
+    }
+
+    if (closeBtn) {
+      closeBtn.addEventListener('click', function () {
+        closeModal();
+      });
+    }
+
+    modal.addEventListener('click', function (e) {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && modal.classList.contains('show')) {
+        closeModal();
+      }
+    });
+  }
+
+  // 6. Tab Bar GitHub Star Button & Live Count
+  function setupStarButtons() {
+    var starBtns = [
+      document.getElementById('btn-star-repo'),
+      document.getElementById('btn-star-mobile')
+    ];
+    var starCountEls = [
+      document.getElementById('star-count'),
+      document.getElementById('star-count-mobile')
+    ];
+
+    var currentStars = 2; // Baseline stars count
+
+    function updateDisplay(count) {
+      starCountEls.forEach(function (el) {
+        if (el) el.textContent = String(count);
+      });
+    }
+
+    // Attempt live star count fetch from GitHub API
+    fetch('https://api.github.com/repos/iamriteshhh/CodeUI')
+      .then(function (res) {
+        if (res.ok) return res.json();
+        throw new Error('API unavailable');
+      })
+      .then(function (data) {
+        if (data && typeof data.stargazers_count === 'number') {
+          currentStars = data.stargazers_count;
+          updateDisplay(currentStars);
+        }
+      })
+      .catch(function () {
+        // Fallback to baseline
+        updateDisplay(currentStars);
+      });
+
+    var hasStarred = false;
+
+    starBtns.forEach(function (btn) {
+      if (!btn) return;
+      btn.addEventListener('click', function () {
+        if (!hasStarred) {
+          hasStarred = true;
+          currentStars += 1;
+          updateDisplay(currentStars);
+          starBtns.forEach(function (b) {
+            if (b) b.classList.add('starred');
+          });
+          showToast(
+            'Thank you for starring CodeUI! ⭐',
+            'Redirecting to github.com/iamriteshhh/CodeUI',
+            '⭐'
+          );
+        } else {
+          showToast(
+            'CodeUI on GitHub ⭐',
+            'Opening github.com/iamriteshhh/CodeUI',
+            '⭐'
+          );
+        }
+      });
+    });
+  }
+
+  // 7. Search Bar Click & Keyboard Shortcut Ctrl+Shift+P
+  function setupSearchInteraction() {
+    var searchEl = document.querySelector('.nav-search');
+    if (!searchEl) return;
+
+    function triggerSearch() {
+      searchEl.style.borderColor = '#0098ff';
+      setTimeout(function () {
+        searchEl.style.borderColor = '';
+      }, 800);
+      showToast(
+        'Command Palette (Ctrl+Shift+P)',
+        'Documentation search & keyboard navigation shortcuts.',
+        '🔍'
+      );
+    }
+
+    searchEl.addEventListener('click', function () {
+      triggerSearch();
+    });
+
     document.addEventListener('keydown', function (e) {
       if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'P' || e.key === 'p')) {
         e.preventDefault();
-        var searchEl = document.querySelector('.nav-search');
-        if (searchEl) {
-          searchEl.style.borderColor = '#0098ff';
-          setTimeout(function () {
-            searchEl.style.borderColor = '';
-          }, 800);
-        }
-        showDownloadToast('CodeUI Search / Command Palette');
+        triggerSearch();
       }
     });
   }
@@ -147,7 +293,9 @@
   document.addEventListener('DOMContentLoaded', function () {
     setupOSBadge();
     setupDownloadListeners();
-    setupSearchKbd();
+    setupDeveloperModal();
+    setupStarButtons();
+    setupSearchInteraction();
   });
 
 })();

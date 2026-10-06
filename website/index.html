@@ -35,11 +35,33 @@
           <li><a href="#features">Features ▾</a></li>
           <li><a href="https://github.com/iamriteshhh/CodeUI#readme" target="_blank" rel="noopener">Docs ▾</a></li>
           <li><a href="https://github.com/iamriteshhh/CodeUI/releases" target="_blank" rel="noopener">Release Notes</a></li>
-          <li><a href="https://github.com/iamriteshhh/CodeUI" target="_blank" rel="noopener">GitHub ↗</a></li>
+          <li>
+            <button type="button" class="nav-github-btn" id="nav-github-btn" aria-label="View developers on GitHub" aria-haspopup="dialog" title="View Developers on GitHub">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              <span>GitHub ▾</span>
+            </button>
+          </li>
+          <li>
+            <a href="https://github.com/iamriteshhh/CodeUI" target="_blank" rel="noopener" class="btn-nav-star" id="btn-star-repo" title="Star CodeUI on GitHub">
+              <svg class="star-icon" width="14" height="14" viewBox="0 0 16 16" fill="currentColor">
+                <path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.75.75 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Z"/>
+              </svg>
+              <span>Star</span>
+              <span class="star-count" id="star-count">2</span>
+            </a>
+          </li>
         </ul>
       </div>
 
       <div class="navbar-right">
+        <!-- Compact star button for mobile screens -->
+        <a href="https://github.com/iamriteshhh/CodeUI" target="_blank" rel="noopener" class="btn-nav-star btn-star-mobile" id="btn-star-mobile" title="Star CodeUI on GitHub">
+          <svg class="star-icon" width="14" height="14" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.75.75 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Z"/>
+          </svg>
+          <span>Star</span>
+          <span class="star-count" id="star-count-mobile">2</span>
+        </a>
         <div class="nav-search" title="Search documentation">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
           <span>Search</span>
@@ -332,9 +354,10 @@
     <div class="footer-inner">
       <div class="footer-top">
         <div class="footer-socials">
-          <a href="https://github.com/iamriteshhh/CodeUI" target="_blank" rel="noopener" aria-label="CodeUI on GitHub">
+          <button type="button" class="footer-github-btn" id="footer-github-btn" aria-label="View CodeUI Developers on GitHub" title="View CodeUI Developers (@iamriteshhh & @Serion89)">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-          </a>
+            <span class="footer-github-label">Developers</span>
+          </button>
         </div>
 
         <ul class="footer-links">
@@ -351,6 +374,72 @@
       </div>
     </div>
   </footer>
+
+  <!-- Developer Profiles Modal -->
+  <div class="modal-backdrop" id="dev-modal" role="dialog" aria-modal="true" aria-labelledby="dev-modal-title" style="display: none;">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div class="modal-header-text">
+          <div class="modal-badge">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            <span>GitHub Profiles</span>
+          </div>
+          <h2 id="dev-modal-title" class="modal-title">CodeUI Development Team</h2>
+          <p class="modal-sub">Meet the creators behind the CodeUI desktop code editor.</p>
+        </div>
+        <button type="button" class="modal-close-btn" id="modal-close-btn" aria-label="Close dialog">✕</button>
+      </div>
+
+      <div class="dev-cards-grid">
+        <!-- Frontend Developer: iamriteshhh -->
+        <a href="https://github.com/iamriteshhh" target="_blank" rel="noopener" class="dev-card" id="dev-card-ritesh">
+          <div class="dev-avatar-wrap">
+            <img src="https://github.com/iamriteshhh.png" alt="iamriteshhh" class="dev-avatar" loading="lazy" onerror="this.onerror=null;this.src='https://avatars.githubusercontent.com/u/200608897?v=4';">
+            <span class="dev-status-dot" title="Active"></span>
+          </div>
+          <div class="dev-info">
+            <div class="dev-role-badge badge-frontend">Frontend &amp; Lead</div>
+            <h3 class="dev-name">iamriteshhh</h3>
+            <span class="dev-handle">@iamriteshhh</span>
+            <p class="dev-bio">Frontend architect &amp; desktop interface engineer.</p>
+          </div>
+          <div class="dev-action-btn">
+            <span>View GitHub</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+          </div>
+        </a>
+
+        <!-- Backend Developer: Serion89 -->
+        <a href="https://github.com/Serion89" target="_blank" rel="noopener" class="dev-card" id="dev-card-serion">
+          <div class="dev-avatar-wrap">
+            <img src="https://github.com/Serion89.png" alt="Serion89" class="dev-avatar" loading="lazy" onerror="this.onerror=null;this.src='https://avatars.githubusercontent.com/u/205588838?v=4';">
+            <span class="dev-status-dot" title="Active"></span>
+          </div>
+          <div class="dev-info">
+            <div class="dev-role-badge badge-backend">Backend Developer</div>
+            <h3 class="dev-name">Serion89</h3>
+            <span class="dev-handle">@Serion89</span>
+            <p class="dev-bio">Backend system engineer &amp; core compiler lead.</p>
+          </div>
+          <div class="dev-action-btn">
+            <span>View GitHub</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+          </div>
+        </a>
+      </div>
+
+      <div class="modal-footer">
+        <div class="modal-repo-info">
+          <svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5v-9Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8V1.5ZM5 12.25a.25.25 0 0 1 .25-.25H12v1.5H5.25a.25.25 0 0 1-.25-.25Z"/></svg>
+          <span>Repository:</span>
+        </div>
+        <a href="https://github.com/iamriteshhh/CodeUI" target="_blank" rel="noopener" class="modal-repo-link" id="modal-repo-link">
+          <span>github.com/iamriteshhh/CodeUI</span>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
 
   <script src="main.js"></script>
 </body>
