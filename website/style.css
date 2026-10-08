@@ -390,6 +390,13 @@ a:hover {
   gap: 10px;
 }
 
+.btn-dual-wrap .btn-download-primary {
+  font-size: 0.88rem;
+  padding: 12px 10px;
+  gap: 6px;
+  text-align: center;
+}
+
 .btn-download-secondary {
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid var(--border-color);
