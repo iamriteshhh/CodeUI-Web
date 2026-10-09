@@ -5,7 +5,6 @@
  * - Download toast feedback
  * - Developer Profiles Modal (@iamriteshhh & @Serion89)
  * - Tab bar GitHub Star button with live stars count
- * - Search bar click & keyboard shortcut (Ctrl+Shift+P)
  */
 
 (function () {
@@ -260,42 +259,12 @@
     });
   }
 
-  // 7. Search Bar Click & Keyboard Shortcut Ctrl+Shift+P
-  function setupSearchInteraction() {
-    var searchEl = document.querySelector('.nav-search');
-    if (!searchEl) return;
-
-    function triggerSearch() {
-      searchEl.style.borderColor = '#0098ff';
-      setTimeout(function () {
-        searchEl.style.borderColor = '';
-      }, 800);
-      showToast(
-        'Command Palette (Ctrl+Shift+P)',
-        'Documentation search & keyboard navigation shortcuts.',
-        '🔍'
-      );
-    }
-
-    searchEl.addEventListener('click', function () {
-      triggerSearch();
-    });
-
-    document.addEventListener('keydown', function (e) {
-      if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'P' || e.key === 'p')) {
-        e.preventDefault();
-        triggerSearch();
-      }
-    });
-  }
-
   // Init on DOM ready
   document.addEventListener('DOMContentLoaded', function () {
     setupOSBadge();
     setupDownloadListeners();
     setupDeveloperModal();
     setupStarButtons();
-    setupSearchInteraction();
   });
 
 })();

@@ -143,32 +143,6 @@ a:hover {
   gap: 16px;
 }
 
-.nav-search {
-  display: flex;
-  align-items: center;
-  background-color: rgba(255, 255, 255, 0.06);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-sm);
-  padding: 5px 10px;
-  gap: 8px;
-  color: var(--text-muted);
-  font-size: 0.82rem;
-  cursor: pointer;
-  transition: var(--transition);
-}
-
-.nav-search:hover {
-  border-color: rgba(255, 255, 255, 0.25);
-  color: var(--text-secondary);
-}
-
-.search-kbd {
-  background: rgba(255, 255, 255, 0.08);
-  padding: 1px 6px;
-  border-radius: 3px;
-  font-size: 0.72rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
 
 .btn-nav-download {
   background: var(--accent-blue);
@@ -485,10 +459,10 @@ a:hover {
   color: var(--accent-blue);
 }
 
-/* FEATURE HIGHLIGHT CARDS (3 Columns) */
+/* FEATURE HIGHLIGHT CARDS (2 Columns) */
 .feature-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 24px;
   margin-bottom: 40px;
 }
@@ -1157,9 +1131,6 @@ details[open] .sha-arrow {
     padding: 0 16px;
   }
   .nav-links {
-    display: none;
-  }
-  .nav-search {
     display: none;
   }
   .btn-star-mobile {
